@@ -37,6 +37,26 @@
             "type": "array",
             "description": "An array of layout blocks. For more info see the slack blocks documentation.",
             "editor": "json"
+        },
+        "unfurl":{
+            "title": "Unfurl",
+            "type": "string",
+            "description": "Select option for unfurl settings (https://api.slack.com/reference/messaging/link-unfurling)",
+            "editor": "select",
+            "enum": [
+                "default",
+                "links",
+                "media",
+                "all",
+                "none"
+            ],
+            "enumTitles":[
+                "Keep default Slack settings",
+                "Unfurl links",
+                "Unfurl media",
+                "Unfurl both links and media",
+                "Don't unfurl any links or media"
+            ]
         }
     },
     "required": ["token", "text", "channel"]
